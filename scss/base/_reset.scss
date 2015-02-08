@@ -1,0 +1,108 @@
+// ------------------------------
+//		$RESET
+//-------------------------------
+
+abbr, 
+address, 
+article, 
+aside, 
+audio, 
+b, 
+blockquote, 
+div, 
+body, 
+caption, 
+cite, 
+code, 
+dd, 
+del, 
+dfn, 
+dl, 
+dt, 
+em, 
+fieldset, 
+figure, 
+footer, 
+form, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6, 
+header,  
+html,
+i, 
+iframe, 
+ins, 
+kbd,
+label, 
+legend, 
+li, 
+mark, 
+menu, 
+nav, 
+object, 
+ol, 
+p, 
+pre, 
+q, 
+samp, 
+section, 
+small, 
+span, 
+strong, 
+sub, 
+sup, 
+table, 
+tbody, 
+td, 
+tfoot, 
+th, 
+thead, 
+time, 
+tr, 
+ul, 
+var, 
+video { 
+  margin 	: 0; 
+  padding 	: 0; 
+  border 	: 0; 
+  outline 	: 0; 
+  font-size : 100%; 
+}                 
+
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box; 
+       -moz-box-sizing: border-box; 
+       -ms-box-sizing : border-box;
+            box-sizing: border-box;
+}
+
+
+img{
+  width: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+nav ul,
+nav ol{
+ list-style-type: none;
+}
+
+
+article ul,
+section ul{
+  list-style-type: circle;
+}
+
+
+article ol,
+section ol{
+  list-style-type: square;
+}
