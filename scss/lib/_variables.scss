@@ -1,0 +1,119 @@
+// ------------------------------
+//		$VARIABLES
+//-------------------------------
+
+// Archivo de configuración de las
+// variables del framework
+
+
+
+// ------------------------------
+//		$BREAKPOINTS
+//-------------------------------
+
+// Los breakpoints no deben ser fijos sino
+// variar según el contenido de nuestro layout.
+
+$bp1 	: 30em; // ---  480px --- */
+$bp2 	: 40em; // ---  640px --- */
+$bp3 	: 50em; // ---  800px --- */
+$bp4 	: 64em; // --- 1024px --- */
+$bp5 	: 75em; // --- 1200px --- */
+
+
+
+// ------------------------------
+//		$RUTAS
+//-------------------------------
+
+// Ruta imagenes y thumbnails
+$ruta-img 			: "../images";
+$ruta-thumbnails	: "../images/thumbs";
+
+
+
+// ------------------------------
+//		$COLORES
+//-------------------------------
+
+// Escala de grises
+$color-black         	: hsla(0, 0%, 0%, 1);
+$color-superdark     	: lighten($color-black, 10%);
+$color-darkergrey		: lighten($color-black, 15%);
+$color-darkgrey			: lighten($color-black, 25%);
+$color-grey				: lighten($color-black, 50%);
+$color-lightgrey		: lighten($color-black, 75%);
+$color-lightergrey		: lighten($color-black, 90%);
+$color-white			: hsla(360, 100%, 100%, 1);
+
+
+// Redes sociales
+$color-facebook       	: hsla(225, 51%, 47%, 1);
+$color-twitter        	: hsla(212, 100%, 63%, 1);
+$color-googleplus     	: hsla(7, 71%, 55%, 1);
+$color-pinterest      	: hsla(358, 73%, 46%, 1);
+$color-skype          	: hsla(201, 91%, 51%, 1);
+$color-spotify        	: hsla(81, 75%, 41%, 1);
+
+// Alertas y Popups 
+$color-info      		: hsla(240, 34%, 79%, 1);
+$color-success 			: hsla(78, 75%, 45%, 1);
+$color-warning	 		: hsla(28, 82%, 56%, 1);
+$color-alert			: hsla(0, 79%, 55%, 1);
+
+// Layout
+$color-base 			: hsla(230, 50%, 50%, 1);
+$color-secondary		: hsla(68, 86%, 48%, 1);
+$color-third			: hsla(123, 96%, 40%, 1);
+
+// Enlaces
+$color-link				: $color-black;
+$color-link--hover		: $color-lightgrey;
+$color-link--visited	: $color-black;
+$color-link--focus		: $color-third;
+
+
+// Botones
+$color-button--default	: $color-base;
+$color-button--border   : $color-black;
+$color-button--text     : $color-white;
+$color-button--hover    : lighten($color-lightgrey, 25%);
+
+// Layout
+$color-page				: $color-lightergrey;
+$color-body				: $color-lightergrey;
+$color-font				: $color-black;
+
+
+
+// ------------------------------
+//		$LAYOUT
+//-------------------------------
+
+// variables para la visualizacion correcta del layout
+$page__width   			: 100%;
+$page__max-width		: 1200px;
+
+// Sangria y altura de línea
+$gutter--low			: 0.5em;
+$gutter--med			: 1em;
+$gutter--hig			: 1.5em;
+
+$baseline--low			: 0.5em;
+$baseline--med			: 1em;
+$baseline--hig			: 1.5em;
+
+// Fuentes
+$font-family__base		: helvetica, Arial, sans-serif;
+$font-family__secondary	: "times new roman", times, serif;
+$font-family__code		: courier, serif;
+$font-size				: 16;
+
+// Bordes redondeados
+$rounded				: 2px;
+
+// Animaciones: duracion
+$time					: .5s;
+
+
+
