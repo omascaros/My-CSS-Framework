@@ -1,0 +1,219 @@
+//************************************
+//		$MIXINS
+//************************************
+
+
+// ----------------------------------------------------------------------------------
+//	Media Query
+//	$breakpoint: Definidos en /lib/_variables.scss ($bp1,$bp2,$bp3,$bp4,$bp5,)
+//	$query1: 'min' o 'max', en funcion del rango de tamaño que queramos
+//	$query2: 'width', 'device-width', ...
+//	$target: puede ser 'all', 'screen','print',...	
+//
+// 	$query1 + $query2 obtenemos: 'min-width', 'max-width', 'min-device-width', etc...
+//
+// ** Ejemplo de uso   *****************************************************
+// 	.section{
+//		color: green;
+//		@include media($bp1, min, width, all)
+//	}
+//-----------------------------------------------------------------------------------
+
+@mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
+	@if $target != "" {
+		@media #{$target} and (#{$query1}-#{$query2}: #{$breakpoint}) {
+			@content;
+		}
+	}
+	@else {
+		@media (#{$query1}-#{$query2}: #{$breakpoint}) {
+			@content;
+		}
+	}
+}
+
+// -----------------------------------
+//	Vendor
+//	@include vendor(property, value);	
+//------------------------------------
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+
+//************************************
+//	$TIPOGRAFIA
+//************************************
+
+
+//------------------------------------------
+//	Font-size en rem con un fallback en px.
+//	@include font-size(size);	
+//------------------------------------------
+
+@mixin font-size($sizeValue: 16 ){
+  font-size: ($sizeValue) * 1px; //fallback for old browsers
+  font-size: ($sizeValue / $fontsize) * 1rem;
+}
+
+
+
+//************************************
+//	$TEXTURAS
+//************************************
+
+//------------------------------------
+//	Gradiente horizontal
+//	@include horizontal(inicio, fin);	
+//------------------------------------ 
+@mixin horizontal($startColor : $white, $endColor : $lightergrey) {
+	background-color: $endColor;
+	background-image  : -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+	background-image  : -webkit-linear-gradient(left, $startColor, $endColor);                   // Safari 5.1+, Chrome 10+
+	background-image  : -moz-linear-gradient(left, $startColor, $endColor);                      // FF 3.6+
+	background-image  : -ms-linear-gradient(left, $startColor, $endColor);                       // IE10
+	background-image  : -o-linear-gradient(left, $startColor, $endColor);                        // Opera 11.10
+	background-image  : linear-gradient(left, $startColor, $endColor);                           // W3C
+	background-repeat : repeat-x;
+}
+
+
+//------------------------------------
+//	Gradiente vertical
+//	@include vertical(inicio, fin);	
+//------------------------------------
+@mixin vertical($startColor : $white, $endColor:  $lightergrey) {
+	background-image  : -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+	background-image  : -webkit-linear-gradient(top, $startColor, $endColor);                    // Safari 5.1+, Chrome 10+
+	background-color  : $endColor;
+	background-image  : -moz-linear-gradient(top, $startColor, $endColor);                       // FF 3.6+
+	background-image  : -ms-linear-gradient(top, $startColor, $endColor);                        // IE10
+	background-image  : -o-linear-gradient(top, $startColor, $endColor);                         // Opera 11.10
+	background-image  : linear-gradient(top, $startColor, $endColor);                            // W3C
+	background-repeat : repeat-x;
+}
+
+
+//----------------------------------------------
+//	Gradiente direccional
+//	@include directional(inicio, fin, angulo);	
+//----------------------------------------------
+@mixin directional($startColor : $white, $endColor : $lightergrey, $deg : 45deg) {
+	background-color  : $endColor;
+	background-image  : -moz-linear-gradient($deg, $startColor, $endColor);                     // FF 3.6+
+	background-image  : -ms-linear-gradient($deg, $startColor, $endColor);                      // IE10
+	background-image  : -webkit-linear-gradient($deg, $startColor, $endColor);                  // Safari 5.1+, Chrome 10+
+	background-image  : -o-linear-gradient($deg, $startColor, $endColor);                       // Opera 11.10
+	background-image  : linear-gradient($deg, $startColor, $endColor);                          // W3C
+	background-repeat : repeat-x;
+}
+
+
+
+//************************************
+//	$ELEMENTOS
+//************************************
+
+//------------------------------------
+//	Bordes redondeados
+//	@include rounded(size);	
+//------------------------------------
+@mixin rounded($radius: $rounded) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+//--------------------------------------------------------
+//	Box-sizing
+//	model: 	border-box, content-box, padding-box, inherit
+//	@include box-sizing(model);	
+//--------------------------------------------------------
+@mixin box-sizing($box-model: border-box) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+     -ms-box-sizing : $box-model;
+          box-sizing: $box-model;
+}
+
+
+//-------------------------------------------------------------
+//	Box-shadow
+//	@include box-shadow(vertical, horizontal, opacidad, color);	
+//-------------------------------------------------------------
+@mixin box-shadow($vertical, $horizontal, $blur, $color) {
+    -webkit-box-shadow: $vertical $horizontal $blur $color;
+       -moz-box-shadow: $vertical $horizontal $blur $color;
+            box-shadow: $vertical $horizontal $blur $color;
+}
+
+
+
+//************************************
+//	$ANIMACIONES
+//************************************
+
+//------------------------------------------------------------------------
+// Transition
+// @include transition(PROPERTY DURATION DELAY(OPTIONAL) TIMING-FINCTION); 
+//------------------------------------------------------------------------
+@mixin transition($transition) {
+	-webkit-transition : $transition;
+	   -moz-transition : $transition;
+	    -ms-transition : $transition;
+	     -o-transition : $transition;
+	        transition : $transition; 
+}
+
+//---------------------------------
+// Rotar
+// @include rotate(VALUEdeg); 
+//---------------------------------
+@mixin rotate($deg) {
+	-webkit-transform : rotate($deg);
+	   -moz-transform : rotate($deg);
+	    -ms-transform : rotate($deg);
+	     -o-transform : rotate($deg);
+	        transform : rotate($deg);
+}
+
+//---------------------------------
+// Escalar
+// @include scale(ratio); 
+//---------------------------------
+@mixin scale($ratio) {
+	-webkit-transform : scale($ratio);
+	   -moz-transform : scale($ratio);
+	    -ms-transform : scale($ratio);
+	     -o-transform : scale($ratio);
+	        transform : scale($ratio);
+}
+
+//---------------------------------
+// Desplazar
+// @include translate(X, Y) 
+//---------------------------------
+@mixin translate($x: 0, $y: 0) {
+	-webkit-transform : translate($x, $y);
+	   -moz-transform : translate($x, $y);
+	    -ms-transform : translate($x, $y);
+	     -o-transform : translate($x, $y);
+	        transform : translate($x, $y);
+}
+
+//---------------------------------
+// @include translate3d(X, Y, Z) 
+//---------------------------------
+@mixin translate3d($x: 0, $y: 0, $z: 0) {
+	-webkit-transform : translate($x, $y, $z);
+	   -moz-transform : translate($x, $y, $z);
+	    -ms-transform : translate($x, $y, $z);
+	     -o-transform : translate($x, $y, $z);
+	        transform : translate($x, $y, $z);
+}
