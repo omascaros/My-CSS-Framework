@@ -59,7 +59,7 @@
 
 @mixin font-size($sizeValue: 16 ){
   font-size: ($sizeValue) * 1px; //fallback for old browsers
-  font-size: ($sizeValue / $fontsize) * 1rem;
+  font-size: ($sizeValue / $font-size) * 1rem;
 }
 
 
