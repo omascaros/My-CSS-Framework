@@ -1,0 +1,135 @@
+/*------------------------------------*\
+			$BOTONES
+\*------------------------------------*/
+
+//
+// para la optimización del css, se recomienda 
+// borrar los selectores que no se vayan a utilizar
+//
+
+.btn,
+input[type="submit"]{
+	/* BOX MODEL */
+	display: inline-block;
+	margin: 0;
+	padding-top   : $baseline--med;
+   	padding-bottom: $baseline--med;
+   	padding-right : $baseline--hig;
+   	padding-left  : $baseline--hig;
+   	border: 1px solid $color-button--default;
+
+	/* LAYOUT */
+	background-color: $color-button--default;
+	color: $color-button--text;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: normal;
+
+	&:visited{
+		/* LAYOUT */
+		font-weight: normal;
+		color: $color-button--text;
+	}
+
+	&:focus{
+		/* LAYOUT */
+        outline:none;
+    }
+
+    &:hover{
+		/* LAYOUT */
+		text-decoration: none;
+	}
+
+		& a {
+			/* LAYOUT */
+			color :  $color-font--nav;	
+			text-decoration : none;
+
+			&:visited {
+				/* LAYOUT */
+				color: $color-button--text;
+				font-weight: normal;
+			}
+
+			&:hover {
+				/* LAYOUT */
+				background-color: transparent;
+				color: $color-button--text;
+				text-decoration : none;
+				/* ENHANCEMENT */
+				@include transition(none);
+			}
+
+			&:focus {
+				/* LAYOUT */
+				color : $color-button--text;
+				outline : thin dotted;
+			}
+
+		}
+}
+
+// VARIANTES A LOS BOTONES
+
+.btn-desactivado{
+	/* LAYOUT */
+	opacity: 0.5;
+	cursor: default;
+}
+
+// TAMAÑO DE BOTONES
+
+.btn-mini {
+	/* BOX MODEL */
+	padding-left: $baseline--low / 2;
+	padding-right: $baseline--low / 2;
+}
+
+.btn-small {
+	/* BOX MODEL */
+	padding-left: $baseline--low;
+	padding-right: $baseline--low;
+}
+
+.btn-large {
+	/* BOX MODEL */
+	padding-left: $baseline--med * 4;
+	padding-right: $baseline--med * 4;
+}
+
+// BOTONES DE AVISO
+
+.btn-info{
+	/* LAYOUT */
+	background-color: $color-info; 
+	border-color: lighten($color-info, 30%); 
+}
+
+.btn-success{
+	/* LAYOUT */
+	background-color: $color-success;
+	border-color: lighten($color-success, 30%);
+}
+
+.btn-warning{
+	/* LAYOUT */
+	background-color: $color-warning;
+	border-color:  lighten($color-warning, 30%);
+	color: black;
+
+	& a{
+		/* LAYOUT */
+		color: $color-black;
+	}
+}
+
+.bt-error{
+	/* LAYOUT */
+	background-color: $color-alert;
+	border-color: lighten($color-alert, 30%);
+}
+
+
+
+
