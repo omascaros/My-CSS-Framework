@@ -1,0 +1,29 @@
+// ------------------------------
+//		$ELEMENTOS
+//-------------------------------
+
+hr {
+	/* BOX MODEL */
+	display: block;
+	padding: 0;
+	height: 2px;
+	border: 0;
+	border-top: 2px solid $color-base;
+
+}
+
+
+img{
+	/* BOX MODEL */
+	max-width: 100%;
+	vertical-align: top;
+
+}
+
+.img--rounded{
+	border-radius: $rounded;
+}
+
+.img--circle{
+	border-radius: 100%;
+}
