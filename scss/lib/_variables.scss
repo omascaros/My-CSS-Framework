@@ -83,7 +83,7 @@ $color-button--hover    : lighten($color-lightgrey, 25%);
 $color-page				: $color-lightergrey;
 $color-body				: $color-lightergrey;
 $color-font				: $color-black;
-
+$color-font--nav		: $color-white;
 
 
 // ------------------------------
@@ -108,6 +108,7 @@ $font-family__base		: helvetica, Arial, sans-serif;
 $font-family__secondary	: "times new roman", times, serif;
 $font-family__code		: courier, serif;
 $font-size				: 16;
+$font-size--nav			: 16;
 
 // Bordes redondeados
 $rounded				: 2px;

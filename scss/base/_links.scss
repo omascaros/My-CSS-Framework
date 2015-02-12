@@ -1,0 +1,62 @@
+// ------------------------------
+//		$LINKS
+//-------------------------------
+
+a {
+	/* LAYOUT */
+	text-decoration : none;
+	color :  $color-link;	
+	font-family: $font-family--base;
+
+	&:visited {
+		/* LAYOUT */
+		color: $color-link--visited;
+		font-weight: normal;
+	}
+
+	&:hover {
+		/* LAYOUT */
+		background-color: $color-base;
+		text-decoration : none;
+		color: $color-link--hover;
+		/* ENHANCEMENT */
+		@include transition(background-color .2s ease-in);
+	}
+
+	&:focus {
+		/* LAYOUT */
+		outline : thin dotted;
+		color : $color-link--focus;
+	}
+
+}
+
+nav a {
+	/* LAYOUT */
+	color :  $color-font--nav;	
+	font-family: $font-family--base;
+	text-decoration : none;
+	@include font-size($font-size--nav);
+
+	&:visited {
+		/* LAYOUT */
+		color: $color-font--nav;
+		font-weight: normal;
+	}
+
+	&:hover {
+		/* LAYOUT */
+		background-color: transparent;
+		color: $color-font--nav;
+		text-decoration : none;
+		/* ENHANCEMENT */
+		@include transition(none);
+	}
+
+	&:focus {
+		/* LAYOUT */
+		color : $color-font--nav;
+		outline : thin dotted;
+	}
+
+}
