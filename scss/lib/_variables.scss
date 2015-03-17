@@ -14,11 +14,11 @@
 // Los breakpoints no deben ser fijos sino
 // variar según el contenido de nuestro layout.
 
-$bp1 	: 30em; // ---  480px --- */
-$bp2 	: 40em; // ---  640px --- */
-$bp3 	: 50em; // ---  800px --- */
-$bp4 	: 64em; // --- 1024px --- */
-$bp5 	: 75em; // --- 1200px --- */
+$bp1                 	: 30em; // ---  480px --- 
+$bp2                 	: 40em; // ---  640px --- 
+$bp3                 	: 50em; // ---  800px --- 
+$bp4                 	: 64em; // --- 1024px --- 
+$bp5                 	: 75em; // --- 1200px --- 
 
 
 
@@ -27,8 +27,7 @@ $bp5 	: 75em; // --- 1200px --- */
 //-------------------------------
 
 // Ruta imagenes y thumbnails
-$ruta-img 			: "../images";
-$ruta-thumbnails	: "../images/thumbs";
+$ruta-img     			: "../images";
 
 
 
@@ -46,7 +45,6 @@ $color-lightgrey		: lighten($color-black, 75%);
 $color-lightergrey		: lighten($color-black, 90%);
 $color-white			: hsla(360, 100%, 100%, 1);
 
-
 // Redes sociales
 $color-facebook       	: hsla(225, 51%, 47%, 1);
 $color-twitter        	: hsla(212, 100%, 63%, 1);
@@ -62,59 +60,72 @@ $color-warning	 		: hsla(28, 82%, 56%, 1);
 $color-alert			: hsla(0, 79%, 55%, 1);
 
 // Layout
-$color-base 			: hsla(230, 50%, 50%, 1);
-$color-secondary		: hsla(68, 86%, 48%, 1);
-$color-third			: hsla(123, 96%, 40%, 1);
-
-// Enlaces
-$color-link				: $color-black;
-$color-link--hover		: $color-lightgrey;
-$color-link--visited	: $color-black;
-$color-link--focus		: $color-third;
+$color-base 			: hsla(210, 29%, 24%, 1);
+$color-secondary		: hsla(28, 80%, 52%, 1);
+$color-third			: hsla(168, 75%, 42%, 1);
 
 
-// Botones
-$color-button--default	: $color-base;
-$color-button--border   : $color-black;
-$color-button--text     : $color-white;
-$color-button--hover    : lighten($color-lightgrey, 25%);
 
-// Layout
-$color-page				: $color-lightergrey;
-$color-body				: $color-lightergrey;
-$color-font				: $color-black;
-$color-font--nav		: $color-white;
-
-
-// ------------------------------
-//		$LAYOUT
-//-------------------------------
-
+// -----------------------------------------------------
+//		            $LAYOUT
 // variables para la visualizacion correcta del layout
-$page__width   			: 100%;
-$page__max-width		: 1200px;
+//------------------------------------------------------
+
+// General
+$page-width   			    : 100%;
+$page-max-width	    	    : 1200px;
+$page-background-color	    : $color-lightergrey;
+
+// Navegacion
+$nav__font-size             : 16;
+$nav__font-color            : $color-white;
+$nav__background-color      : $color-base;
 
 // Sangria y altura de línea
-$gutter--low			: 0.5em;
-$gutter--med			: 1em;
-$gutter--hig			: 1.5em;
-
-$baseline--low			: 0.5em;
-$baseline--med			: 1em;
-$baseline--hig			: 1.5em;
+$gutterwidth    			: 0.5em;
+$baseline        			: 0.5em;
 
 // Fuentes
-$font-family__base		: helvetica, Arial, sans-serif;
-$font-family__secondary	: "times new roman", times, serif;
-$font-family__code		: courier, serif;
-$font-size				: 16;
-$font-size--nav			: 16;
+$font__base    		        : helvetica, Arial, sans-serif;
+$font__secondary    	    : "times new roman", times, serif;
+$font__code    		        : courier, serif;
+$font-size    				: 16;
+$font-color                 : $color-darkergrey;
+$font-color--strong         : $color-black;
+
+// Enlaces
+$link__color   				: $color-base;
+$link__hover           		: $color-secondary;
+$link__visited            	: lighten($color-base, 10%);
+$link__focus           		: darken($color-secondary, 10%);
+
+// Botones
+$button__background-color  	: $color-base;
+$button__border-color       : $color-black;
+$button__border-width       : 1px;
+$button__border-style       : solid;
+$button__text-color         : $color-white;
+$button__hover-color        : lighten($color-lightgrey, 25%);
+
+// Formularios
+$input__background          : $color-white;
+$input__border              : lighten($color-base, 20%);
+$input__borderwidth         : 1px;
+$input__borderstyle         : solid;
+$input__hover               : $color-base;
+$input__focus               : lighten($color-secondary, 20%);
+$input__placeholdercolor    : $color-lightergrey;
+
 
 // Bordes redondeados
-$rounded				: 2px;
+$rounded    				: 2px;
 
 // Animaciones: duracion
-$time					: .5s;
+$animationTime    			: .5s;
+
+
+
+
 
 
 

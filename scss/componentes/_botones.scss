@@ -7,20 +7,19 @@
 // borrar los selectores que no se vayan a utilizar
 //
 
-.btn,
-input[type="submit"]{
+.btn{
 	/* BOX MODEL */
 	display: inline-block;
 	margin: 0;
-	padding-top   : $baseline--med;
-   	padding-bottom: $baseline--med;
-   	padding-right : $baseline--hig;
-   	padding-left  : $baseline--hig;
-   	border: 1px solid $color-button--default;
+	padding-top   : $baseline;
+   	padding-bottom: $baseline;
+   	padding-right : $baseline;
+   	padding-left  : $baseline;
+    border: $button__border-width $button__border-style $button__border-color;
 
 	/* LAYOUT */
-	background-color: $color-button--default;
-	color: $color-button--text;
+    background-color: $button__background-color;
+    color: $button__text-color;
 	cursor: pointer;
 	font-size: 1em;
 	font-weight: normal;
@@ -28,12 +27,12 @@ input[type="submit"]{
 	&:visited{
 		/* LAYOUT */
 		font-weight: normal;
-		color: $color-button--text;
+        color: $button__text-color;
 	}
 
 	&:focus{
 		/* LAYOUT */
-        outline:none;
+        outline: none;
     }
 
     &:hover{
@@ -43,19 +42,19 @@ input[type="submit"]{
 
 		& a {
 			/* LAYOUT */
-			color :  $color-font--nav;	
+            color :  $button__text-color;	
 			text-decoration : none;
 
 			&:visited {
 				/* LAYOUT */
-				color: $color-button--text;
+                color: $button__text-color;
 				font-weight: normal;
 			}
 
 			&:hover {
 				/* LAYOUT */
 				background-color: transparent;
-				color: $color-button--text;
+                color: $button__text-color;
 				text-decoration : none;
 				/* ENHANCEMENT */
 				@include transition(none);
@@ -63,7 +62,7 @@ input[type="submit"]{
 
 			&:focus {
 				/* LAYOUT */
-				color : $color-button--text;
+                color : $button__text-color;
 				outline : thin dotted;
 			}
 
@@ -82,20 +81,20 @@ input[type="submit"]{
 
 .btn-mini {
 	/* BOX MODEL */
-	padding-left: $baseline--low / 2;
-	padding-right: $baseline--low / 2;
+	padding-left: $baseline / 2;
+	padding-right: $baseline / 2;
 }
 
 .btn-small {
 	/* BOX MODEL */
-	padding-left: $baseline--low;
-	padding-right: $baseline--low;
+	padding-left: $baseline;
+	padding-right: $baseline;
 }
 
 .btn-large {
 	/* BOX MODEL */
-	padding-left: $baseline--med * 4;
-	padding-right: $baseline--med * 4;
+	padding-left: $baseline * 4;
+	padding-right: $baseline * 4;
 }
 
 // BOTONES DE AVISO

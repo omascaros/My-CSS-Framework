@@ -5,20 +5,20 @@
 a {
 	/* LAYOUT */
 	text-decoration : none;
-	color :  $color-link;	
-	font-family: $font-family--base;
+	color :  $link__color;	
+	font-family: $font__base;
 
 	&:visited {
 		/* LAYOUT */
-		color: $color-link--visited;
+		color: $link__visited;
 		font-weight: normal;
 	}
 
 	&:hover {
+        /* BOX MODEL */
+        border-bottom: $link__hover;
 		/* LAYOUT */
-		background-color: $color-base;
-		text-decoration : none;
-		color: $color-link--hover;
+		color: $link__hover;
 		/* ENHANCEMENT */
 		@include transition(background-color .2s ease-in);
 	}
@@ -26,28 +26,28 @@ a {
 	&:focus {
 		/* LAYOUT */
 		outline : thin dotted;
-		color : $color-link--focus;
+		color : $link__focus;
 	}
 
 }
 
 nav a {
 	/* LAYOUT */
-	color :  $color-font--nav;	
-	font-family: $font-family--base;
+    color :  $nav__font-color;	
+    font-family: $font__base;
 	text-decoration : none;
-	@include font-size($font-size--nav);
+    @include font-size($nav__font-size);
 
 	&:visited {
 		/* LAYOUT */
-		color: $color-font--nav;
+        color: $nav__font-color;
 		font-weight: normal;
 	}
 
 	&:hover {
 		/* LAYOUT */
 		background-color: transparent;
-		color: $color-font--nav;
+        color: $nav__font-color;
 		text-decoration : none;
 		/* ENHANCEMENT */
 		@include transition(none);
@@ -55,7 +55,7 @@ nav a {
 
 	&:focus {
 		/* LAYOUT */
-		color : $color-font--nav;
+        color : $nav__font-color;
 		outline : thin dotted;
 	}
 
