@@ -14,10 +14,9 @@ hr {
 
 
 img{
-	/* BOX MODEL */
-	max-width: 100%;
-	vertical-align: top;
-
+    width: auto;
+    max-width: 100%;
+    vertical-align: top;
 }
 
 .img--rounded{
@@ -26,6 +25,22 @@ img{
 
 .img--circle{
 	border-radius: 100%;
+}
+
+figure {
+    margin-bottom : $baseline;
+
+    img {
+        margin-bottom : $baseline / 4;
+    }
+
+    figcaption {
+        display : block;
+        font-weight : normal;
+        @include font-size(14);
+        font-style : italic;
+        color : $color-grey;
+    }
 }
 
 // ********************************

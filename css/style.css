@@ -1,104 +1,22 @@
 /*------------------------------------*\
 		$RESET
 \*------------------------------------*/
-abbr,
-address,
-article,
-aside,
-audio,
-b,
-blockquote,
-div,
-body,
-caption,
-cite,
-code,
-dd,
-del,
-dfn,
-dl,
-dt,
-em,
-fieldset,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-html,
-i,
-iframe,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-p,
-pre,
-q,
-samp,
-section,
-small,
-span,
-strong,
-sub,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-ul,
-var,
-video {
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-img {
-  width: auto;
-  max-width: 100%;
-  vertical-align: top;
-}
-
-nav ul,
-nav ol {
-  list-style-type: none;
-}
-
-article ul,
-section ul {
-  list-style-type: circle;
-}
-
-article ol,
-section ol {
-  list-style-type: square;
 }
 
 /*------------------------------------*\
@@ -195,10 +113,25 @@ ol {
   padding-top: 0;
 }
 
+nav ul,
+nav ol {
+  list-style-type: none;
+}
+
 ol li,
 ul li {
   /* BOX MODEL */
   margin: 0 0.5em;
+}
+
+article ul,
+section ul {
+  list-style-type: circle;
+}
+
+article ol,
+section ol {
+  list-style-type: square;
 }
 
 b, strong {
@@ -282,7 +215,7 @@ hr {
 }
 
 img {
-  /* BOX MODEL */
+  width: auto;
   max-width: 100%;
   vertical-align: top;
 }
@@ -293,6 +226,21 @@ img {
 
 .img--circle {
   border-radius: 100%;
+}
+
+figure {
+  margin-bottom: 0.5em;
+}
+figure img {
+  margin-bottom: 0.125em;
+}
+figure figcaption {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: gray;
 }
 
 img.alignright {

@@ -96,10 +96,26 @@ ol{
     padding-top 	: 0;
 }
 
+nav ul,
+nav ol{
+    list-style-type: none;
+}
+
 ol li,
 ul li{
     /* BOX MODEL */
     margin: 0 $gutterwidth;
+}
+
+article ul,
+section ul{
+    list-style-type: circle;
+}
+
+
+article ol,
+section ol{
+    list-style-type: square;
 }
 
 
